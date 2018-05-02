@@ -1,15 +1,19 @@
-var botaoRemover = document.querySelector('.opcoesDoCartao-remove')
+;(function(){
 
-botaoRemover.addEventListener('click', function(){
+    const listaDeBotoes = document.querySelectorAll('.opcoesDoCartao-remove')
 
-    var cartao = this.parentNode.parentNode
+    for (let contador = 0; contador < listaDeBotoes.length; contador++) {
+        
+        listaDeBotoes[contador].addEventListener('click', function () {
+            
+            let cartao = this.parentNode.parentNode
+            cartao.classList.add('cartao--some')
+            cartao.addEventListener('transitionend', removeCartao)
+        })
+    }
 
-    cartao.classList.add('cartao--some')
+    function removeCartao() {
+        this.remove()
+    }
 
-    cartao.addEventListener('transitionend', removeCartao)
-
-})
-
-function removeCartao(){
-    this.remove()
-}
+})()

@@ -5,6 +5,7 @@
 	left: 0;
 	transform: translate(-1em, -50%);
 	white-space: nowrap;
+	pointer-events: none;
 }
 
 .opcoesDoCartao-opcao {
@@ -24,6 +25,19 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	text-indent: -99999px;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.cartao--focado .opcoesDoCartao-opcao,
+.cartao:focus .opcoesDoCartao-opcao,
+.cartao:hover .opcoesDoCartao-opcao {
+	opacity: 1;
+}
+
+.cartao--focado .opcoesDoCartao,
+.cartao:hover .opcoesDoCartao {
+	pointer-events: auto;
 }
 
 .opcoesDoCartao-opcao:first-child {
