@@ -9,6 +9,9 @@
             let cartao = this.parentNode.parentNode
             cartao.classList.add('cartao--some')
             cartao.addEventListener('transitionend', removeCartao)
+
+            console.log(event);
+            
         })
     }
 
