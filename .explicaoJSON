@@ -1,0 +1,33 @@
+JSON
+
+JavaScript Object Notation
+
+Object/Objeto -> representação
+-> atributos/propriedades (caracteristicas)
+-> métodos/funções (ações)
+
+cartao
+    .texto
+    .cor
+    .remover()
+    .editar()
+
+JSON
+
+let escola = {
+     nome: 'Caelum'
+    ,endereço: 'Rua Vergueiro'
+    ,ensinar: function(curso){
+        curso + 1
+        return certificado
+    }
+}
+
+escola.nome
+
+escola.ensinar()
+
+
+
+
+

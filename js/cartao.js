@@ -1,4 +1,4 @@
-;(function(){
+;(function (){
     const listaDeCartoes = document.querySelectorAll('.cartao')
 
     for(let i = 0; i < listaDeCartoes.length; i++ ){
