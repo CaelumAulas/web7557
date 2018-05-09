@@ -1,4 +1,7 @@
 ;(function(){
+
+    console.log('adaad');
+    
     const botao = document.querySelector('#btnMudaLayout')
     const mural = document.querySelector('.mural')
     

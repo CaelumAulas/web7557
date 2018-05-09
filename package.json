@@ -1,0 +1,27 @@
+{
+  "name": "ceep",
+  "version": "1.0.0",
+  "description": "Ceep é um keep",
+  "main": "index.html",
+  "scripts": {
+    "watch": " ./node_modules/.bin/babel src --out-dir dist --copy-files --watch --presets env",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanessametonini/web7557.git"
+  },
+  "author": "Vanessa Tonini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanessametonini/web7557/issues"
+  },
+  "homepage": "https://github.com/vanessametonini/web7557#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}

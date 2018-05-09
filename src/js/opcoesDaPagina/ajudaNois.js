@@ -32,12 +32,12 @@
             //console.log(typeof(listaDeCartoes));
 
             //transforma a NodeList em Array, invocando o seu construtor
-            listaDeCartoesArray = Array.from(listaDeCartoes)
-            
+            let listaDeCartoesArray = Array.from(listaDeCartoes)
+
             //encontra os cartões de ajuda e destaca eles 
             //e guarda no retorno de Filter cada cartao de ajuda na variavel listaComAjudas
             let listaComAjudas = listaDeCartoesArray
-                                    .filter(cartao => {
+                                    .filter(cartao => {                                        
                                         if (cartao.dataset.ajuda) {
                                             cartao.style.boxShadow = '0px 0px 10px 10px yellow'
                                             return cartao
