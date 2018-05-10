@@ -1,20 +1,37 @@
 ;(function() {
 
-    let listaDeAjuda = [
-        {
-            texto: 'Bem ao vindo ao ceep'
-            , cor: '#b4d455'
-            , ajuda: true
-        }
-        , {
-            texto: 'Clique no botão linhas para mudar o layout'
-            , cor: 'red'
-            , ajuda: true
-        }
-    ]
+    //copia do objeto que é capaz de fazer as conexoes com apis
+    let conexaoApi = new XMLHttpRequest()
+        ,listaDeAjuda = []
 
-    listaDeAjuda.forEach(function(ajuda) {
-        criarCartaoNoMural(ajuda)
+    //ter o endereço da URL
+    conexaoApi.open('GET','http://ceep.herokuapp.com/cartoes/instrucoes')
+
+    //definir que quero a resposta em JSON
+    conexaoApi.responseType = 'json'
+
+    //dar o "enter"
+    conexaoApi.send()
+
+    //esperar pra ver oq vai da
+    conexaoApi.addEventListener('load', function(){
+        //retorno com os dados
+        let resposta = conexaoApi.response
+
+        listaDeAjuda = resposta
+                        .instrucoes
+                        .map( function(instrucao){
+        
+                            return {
+                                    conteudo: instrucao.conteudo,
+                                    cor: instrucao.cor,
+                                    ajuda: true
+                                }
+                        })
+
+        listaDeAjuda.forEach(function(ajuda) {
+            criarCartaoNoMural(ajuda)
+        })
     })
 
     btnAjuda.addEventListener('click', function() {   

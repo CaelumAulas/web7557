@@ -45,7 +45,7 @@
                 Inspiração
             </label>
             </div>
-            <p class="cartao-conteudo" contenteditable tabindex="0">${objetoCartao.texto}</p>
+            <p class="cartao-conteudo" contenteditable tabindex="0">${objetoCartao.conteudo}</p>
         `
         
         mural.insertAdjacentElement('afterbegin', cartao)

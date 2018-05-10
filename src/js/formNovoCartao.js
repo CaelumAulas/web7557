@@ -20,7 +20,7 @@
             this.reset()
 
             let cartao = {
-                texto: conteudoCartao 
+                conteudo: conteudoCartao 
             }
 
             criarCartaoNoMural(cartao)
